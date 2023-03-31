@@ -16,7 +16,7 @@ public class ItemRepository {
         if (item.getId() == null) {
             em.persist(item);
         } else {
-            em.merge(item);
+            em.merge(item); //파라미터 item은 영속성 객체로 관리되지 않고 merge()의 반환결과가 영속성으로 관리된다.
         }
     }
 
